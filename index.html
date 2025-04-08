@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>GoVulnApp</title></head>
+<body>
+    <h2>JWT Generator (Vulnerable)</h2>
+    <form method="POST" action="/token">
+        Username: <input type="text" name="user" />
+        <button type="submit">Generate Token</button>
+    </form>
+
+    <p>Token: {{.token}}</p>
+
+    <hr/>
+    <h2>Token Validator</h2>
+    <form method="GET" action="/validate">
+        <input type="text" name="token" placeholder="Paste token here" size="80" />
+        <button type="submit">Validate</button>
+    </form>
+</body>
+</html>
